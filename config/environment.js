@@ -6,8 +6,9 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+	firebase: 'https://firey-torch-673.firebaseio.com/',
     EmberENV: {
-      FEATURES: {
+      FEATURES: { 
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
