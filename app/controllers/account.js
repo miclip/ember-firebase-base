@@ -3,19 +3,18 @@ import Ember from 'ember';
 
 
 export default Ember.Controller.extend({
+  firebase: Ember.inject.service(),
+
 actions:{
  registerUser: function(model) {
- 
+	   let ref = this.get('firebase');
  	  var email = model.get('email');
 	  console.log("email:"+email);
 	  var password = model.get('password');
-      this.get("session").open("firebase", { provider: "password",email:email,password:password, session:"sessionOnly"}).then(function(data) {
+	  
+      ref.createUser({ email:email,password:password, session:"sessionOnly"}, function(data) {
         console.log(data);
-      }).catch(function(failure){
-	  console.log(failure);
-	  console.log(failure.description);
-	  });
-	 
+      }); 
     },
 	 signIn: function() {
       this.get("session").open("firebase", { provider: "password", email:"", 
