@@ -13,5 +13,6 @@
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
     "firebase": "^2.1.0"
+    
   }
 }
