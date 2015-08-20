@@ -12,9 +12,18 @@ actions:{
 	  console.log("email:"+email);
 	  var password = model.get('password');
 	  
-      ref.createUser({ email:email,password:password, session:"sessionOnly"}, function(data) {
-        console.log(data);
-      }); 
+      ref.createUser({ email:email,password:password, session:"sessionOnly"}, function(err) {
+		if(!err){
+			Ember.RSVP.Promise.resolve();
+			alert('success');
+			
+		} else {
+			Ember.RSVP.Promise.reject(err);
+			alert(err);
+		}
+      });
+
+		
     },
 	 signIn: function() {
       this.get("session").open("firebase", { provider: "password", email:"", 
