@@ -1,0 +1,15 @@
+{{#if resetSuccess}}
+	<p>An email is on its way to you. Follow the instructions to reset your password.</p>
+{{else unless session.currentUser}}
+   <form {{action 'resetPassword' model on="submit"}}> 
+		<div class="form-group">
+			<label for="email">Email address</label>
+			
+			
+				{{validated-input type="email" placeholder="Enter email" value=email errors=errors.email}}
+		
+		</div>
+	   <button class="" type='submit'>Reset</button>
+	</form>
+{{/if}}
+
