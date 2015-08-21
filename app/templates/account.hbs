@@ -1,7 +1,18 @@
 {{#if session.currentUser}}
     <button {{action "signOut"}}>Sign Out</button>
 {{else}}
-    <button {{action "signIn" data}}>Sign in</button>
+<form {{action 'signIn' model on="submit"}}> 
+	<div class="form-group">
+		<label for="email">Email address</label>
+		{{input name="email" placeholder="Enter email" type="email" value=model.email }}
+	</div>
+	<div class="form-group">
+		<label for="password">Password</label>
+	     {{input name="password" placeholder="Enter password" type="password" value=model.password }}
+	</div>
+   <button class="" type='submit'>Sign in</button>
+</form>
+    
 {{/if}}
 
 <h3>Register</h3>

@@ -15,19 +15,23 @@ actions:{
       ref.createUser({ email:email,password:password, session:"sessionOnly"}, function(err) {
 		if(!err){
 			Ember.RSVP.Promise.resolve();
-			alert('success');
+			
 			
 		} else {
 			Ember.RSVP.Promise.reject(err);
-			alert(err);
+			
 		}
       });
 
 		
     },
-	 signIn: function() {
-      this.get("session").open("firebase", { provider: "password", email:"", 
-	  password:"", session: "sessionOnly"}).then(function(data) {
+	 signIn: function(model) {
+	 var email = model.get('email');
+	  console.log("email:"+email);
+	  var password = model.get('password');
+	  
+      this.get("session").open("firebase", { provider: "password", email:email, 
+	  password:password, session: "sessionOnly"}).then(function(data) {
         console.log(data.currentUser);
       });
     }
