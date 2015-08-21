@@ -15,6 +15,8 @@
     
 {{/if}}
 
+
+{{#if  session.currentUser}}
 <h3>Register</h3>
 <!-- REGISTER -->
 <form {{action 'registerUser' model on="submit" }}>
@@ -34,3 +36,4 @@
 	<button class="" type='submit'>Register</button>
 </form>
 <!-- / REGISTER -->
+{{/if}}
