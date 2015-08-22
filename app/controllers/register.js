@@ -3,37 +3,50 @@ import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
 export default Ember.ObjectController.extend(EmberValidations,{
-	validations: {
+validations: {
     email: {
-      presence: {message:"Email is required"},
-      length: { maximum: 5 }
-    },    
+      presence: {message: " Email is required"},
+      // validate using HTML5 accepted exceptions 
+      format:{with:/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+  				message:" Email is not valid"}
+    },
     password:{
       presence:{
         message: " Password is required"
       },
     	confirmation: true,
     },
-   
   },
 firebase: Ember.inject.service(),
 actions:{
  registerUser: function(model) {
-	   let ref = this.get('firebase');
+	  let ref = this.get('firebase');
  	  var email = model.get('email');
 	  console.log("email:"+email);
 	  var password = model.get('password');
-	  
-      ref.createUser({ email:email,password:password, session:"sessionOnly"}, function(err) {
-		if(!err){
-			Ember.RSVP.Promise.resolve();
-			
-			
-		} else {
-			Ember.RSVP.Promise.reject(err);
-			
-		}
-      });
+	  this.validate().then(function(){
+	  	ref.createUser({ email:email,password:password, session:"sessionOnly"}, function(err) {
+			if(!err){
+				Ember.RSVP.Promise.resolve();	
+			} else {
+				Ember.RSVP.Promise.reject(err);
+				switch (err.code) {
+			      case "EMAIL_TAKEN":
+			      	model.get('errors').add('email', 'Email is already in use.');
+			        break;
+			      case "INVALID_EMAIL":
+			      	model.get('errors').add('email', 'Email is not valid.');
+			        break;
+			      default:
+			      	model.get('errors').add('', 'Unexpected error:'+ err.message);
+			        console.log("Error creating user:", err.message);
+			    } 
+			}
+      	});
+	  }).catch(function(){
+  		alert('Failed, validation errors exist');
+  	});
+      
     }
 	    }
 });

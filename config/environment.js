@@ -13,7 +13,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'style-src': '\'self\' fonts.googleapis.com',
       'font-src': '\'self\' fonts.gstatic.com',
-      'img-src': '\'self\' *.gravatar.com',
+      'img-src': '\'self\' *.gravatar.com data:image',
       'connect-src': '\'self\' wss://*.firebaseio.com https://auth.firebase.com'
     },
     EmberENV: {

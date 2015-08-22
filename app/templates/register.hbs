@@ -1,19 +1,14 @@
 
 {{#unless  session.currentUser}}
-<form {{action 'registerUser' model on="submit" }}>
-	 <h2>Register</h2>
-	<div class="form-group">
-		<label for="email">Email address</label>
-		{{validated-input type="email" placeholder="Enter email" value=model.email errors=errors.email}}
-	</div>
-	<div class="form-group">
-		<label for="password">Password</label>
-		{{validated-input type="password" placeholder="Enter password" value=model.password errors=errors.password}}
-	</div>
-	<div class="form-group">
-		<label for="passwordConfirmation">Confirm Password</label>
-		{{validated-input type="password" placeholder="Confirm password" value=model.passwordConfirmation errors=errors.passwordConfirmation}}
-	</div>	
-	<button class="btn btn-primary" type='submit'>Register</button>
-</form>
+	<form {{action 'registerUser' model on="submit" }}>
+		<h2>Register</h2>
+		{{#if model.errors}}
+			{{display-errors errors=model.errors}}
+		{{/if}}
+		{{validated-input-group type="email" placeholder="Enter email" name="email" labelText="Email Address" value=model.email errors=errors.email}}
+		{{validated-input-group type="password" placeholder="Enter password" name="password" labelText="Password" value=model.password errors=errors.password}}
+		{{validated-input-group type="password" placeholder="Confirm password" name="passwordConfirmation" labelText="Confirm Password" value=model.passwordConfirmation errors=errors.passwordConfirmation}}
+		<button class="btn btn-primary" type='submit'>Register</button>
+	</form>
 {{/unless}}
+

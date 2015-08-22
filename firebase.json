@@ -1,0 +1,9 @@
+{
+  "firebase": "fiery-torch-673",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

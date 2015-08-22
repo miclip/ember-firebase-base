@@ -41,7 +41,6 @@ header {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-
     font-weight: 300;
   }
 
@@ -71,7 +70,6 @@ header nav {
 
   header nav a:hover {
     background-color: #379ae9;
-
     color: #FFF;
   }
 

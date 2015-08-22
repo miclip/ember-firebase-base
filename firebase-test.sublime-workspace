@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"par",
+				"parsedHtml"
+			],
+			[
+				"pr",
+				"presence"
+			],
+			[
 				"reset",
 				"resetSuccess"
 			],
@@ -16,10 +28,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/routes/reset.js",
+			"file": "app/controllers/reset.js",
 			"settings":
 			{
-				"buffer_size": 140,
+				"buffer_size": 1541,
 				"line_ending": "Unix"
 			}
 		},
@@ -27,35 +39,51 @@
 			"file": "app/controllers/register.js",
 			"settings":
 			{
-				"buffer_size": 811,
+				"buffer_size": 1602,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/controllers/reset.js",
-			"settings":
-			{
-				"buffer_size": 873,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "{{#if resetSuccess}}\n	<p>An email is on its way to you. Follow the instructions to reset your password.</p>\n{{else unless session.currentUser}}\n   <form {{action 'resetPassword' model on=\"submit\"}}> \n		<div class=\"form-group\">\n			<label for=\"email\">Email address</label>			\n			{{validated-input type=\"email\" placeholder=\"Enter email\" value=email errors=errors.email}}\n		</div>\n	   <button class=\"\" type='submit'>Reset</button>\n	</form>\n{{/if}}\n\n",
-			"file": "app/templates/reset.hbs",
-			"file_size": 454,
-			"file_write_time": 130846638719177342,
-			"settings":
-			{
-				"buffer_size": 445,
-				"line_ending": "Unix"
-			}
-		},
-		{
+			"contents": "\n{{#unless  session.currentUser}}\n\n<form {{action 'registerUser' model on=\"submit\" }}<h2>Register</h2>\n\n	{{#if model.errors}}\n	  {{display-errors errors=model.errors}}\n	{{/if}}\n\n\n	 {{validated-input-group type=\"email\" placeholder=\"Enter email\" name=\"email\" labelText=\"Email Address\" value=model.email errors=errors.email}}\n\n	 {{validated-input-group type=\"password\" placeholder=\"Enter password\" name=\"password\" labelText=\"Password\" value=model.password errors=errors.password}}\n\n	 {{validated-input-group type=\"password\" placeholder=\"Confirm password\" name=\"passwordConfirmation\" labelText=\"Confirm Password\" value=model.passwordConfirmation errors=errors.passwordConfirmation}}\n	\n	<button class=\"btn btn-primary\" type='submit'>Register</button>\n</form>\n{{/unless}}\n\n",
 			"file": "app/templates/register.hbs",
+			"file_size": 795,
+			"file_write_time": 130847253220705900,
 			"settings":
 			{
-				"buffer_size": 826,
+				"buffer_size": 767,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ember-cli-build.js",
+			"settings":
+			{
+				"buffer_size": 1322,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/templates/reset.hbs",
+			"settings":
+			{
+				"buffer_size": 952,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/components/validated-input-group.hbs",
+			"settings":
+			{
+				"buffer_size": 717,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/components/display-errors.hbs",
+			"settings":
+			{
+				"buffer_size": 318,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -94,7 +122,7 @@
 				"Set Syntax: HTML"
 			]
 		],
-		"width": 400.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -111,14 +139,24 @@
 	},
 	"file_history":
 	[
-		"/C/Projects/Ember/firebase-test/app/controllers/login.js",
-		"/C/Projects/Ember/firebase-test/app/components/validated-input.js",
-		"/C/Projects/Ember/firebase-test/app/templates/components/validated-input.hbs",
-		"/C/Projects/Ember/firebase-test/app/models/user.js",
+		"/C/Projects/Ember/firebase-test/app/controllers/register.js",
+		"/C/Projects/Ember/firebase-test/app/controllers/reset.js",
+		"/C/Projects/Ember/firebase-test/app/templates/reset.hbs",
 		"/C/Projects/Ember/firebase-test/app/templates/register.hbs",
-		"/C/Projects/Ember/firebase-test/app/routes/login.js",
+		"/C/Projects/Ember/firebase-test/app/templates/components/validated-input.hbs",
 		"/C/Projects/Ember/firebase-test/app/templates/application.hbs",
 		"/C/Projects/Ember/firebase-test/app/templates/login.hbs",
+		"/C/Projects/Ember/firebase-test/app/templates/components/validated-input-group.hbs",
+		"/C/Projects/Ember/firebase-test/app/helpers/label.js",
+		"/C/Projects/Ember/firebase-test/app/styles/app.css",
+		"/C/Projects/Ember/firebase-test/bower_components/bootstrap/dist/css/bootstrap.css",
+		"/C/Projects/Ember/firebase-test/app/components/validated-input-group.js",
+		"/C/Projects/Ember/firebase-test/ember-cli-build.js",
+		"/C/Projects/Ember/firebase-test/app/routes/reset.js",
+		"/C/Projects/Ember/firebase-test/app/controllers/login.js",
+		"/C/Projects/Ember/firebase-test/app/components/validated-input.js",
+		"/C/Projects/Ember/firebase-test/app/models/user.js",
+		"/C/Projects/Ember/firebase-test/app/routes/login.js",
 		"/C/Projects/Ember/firebase-test/package.json",
 		"/C/Users/Michael Lipscombe/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Projects/Ember/firebase-test/bower.json",
@@ -131,7 +169,6 @@
 		"/C/Projects/Ember/firebase-test/app/torii-adapters/application.js",
 		"/C/Projects/Ember/firebase-test/app/routes/application.js",
 		"/C/Projects/Ember/firebase-test/app/controllers/index.js",
-		"/C/Projects/Ember/firebase-test/app/styles/app.css",
 		"/C/Projects/Ember/firebase-test/app/index.html",
 		"/C/Projects/Ember/firebase-test/app/templates/auth.hbs",
 		"/C/Projects/Ember/firebase-test/app/routes/index.js",
@@ -184,10 +221,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"error",
 			"confirmPassword"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -203,23 +241,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/routes/reset.js",
+					"file": "app/controllers/reset.js",
 					"settings":
 					{
-						"buffer_size": 140,
+						"buffer_size": 1541,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								63,
-								63
+								1186,
+								1186
 							]
 						],
 						"settings":
@@ -227,7 +265,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -237,15 +275,68 @@
 					"file": "app/controllers/register.js",
 					"settings":
 					{
-						"buffer_size": 811,
+						"buffer_size": 1602,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								295,
-								295
+								1067,
+								1485
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/templates/register.hbs",
+					"settings":
+					{
+						"buffer_size": 767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								117,
+								122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "ember-cli-build.js",
+					"settings":
+					{
+						"buffer_size": 1322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								780,
+								780
 							]
 						],
 						"settings":
@@ -261,45 +352,45 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/controllers/reset.js",
-					"settings":
-					{
-						"buffer_size": 873,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								142,
-								236
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "app/templates/reset.hbs",
 					"settings":
 					{
-						"buffer_size": 445,
+						"buffer_size": 952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								277,
-								367
+								544,
+								582
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/templates/components/validated-input-group.hbs",
+					"settings":
+					{
+						"buffer_size": 717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								615,
+								615
 							]
 						],
 						"settings":
@@ -314,25 +405,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/templates/register.hbs",
+					"buffer": 6,
+					"file": "app/templates/components/display-errors.hbs",
 					"settings":
 					{
-						"buffer_size": 826,
+						"buffer_size": 318,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								826,
-								826
+								247,
+								247
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

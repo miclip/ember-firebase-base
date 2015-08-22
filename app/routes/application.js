@@ -9,6 +9,7 @@ export default Ember.Route.extend({
 	// global signout action  
     signOut: function() {
       this.get("session").close();
+      this.transitionTo('index');
     }
   }
 });

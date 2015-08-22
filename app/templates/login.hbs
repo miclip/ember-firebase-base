@@ -1,16 +1,20 @@
-{{#if session.currentUser}}
-    <button {{action "signOut"}}>Sign Out</button>
-{{else}}
-<form {{action 'signIn' model on="submit"}}> 
-	 <h2>Login</h2>
-	<div class="form-group">
-		<label for="email">Email address</label>
-		{{validated-input type="email" placeholder="Enter email" value=model.email errors=errors.email}}
-	</div>
-	<div class="form-group">
-		<label for="password">Password</label>
-		{{validated-input type="password" placeholder="Enter password" value=model.password errors=errors.password}}
-	</div>
-   <button class="btn btn-primary" type='submit'>Sign in</button>
-</form>
-{{/if}}
+{{#unless session.currentUser}}
+	<form {{action 'signIn' model on="submit"}}> 
+		 <h2>Login</h2>
+		{{#if model.errors}}
+			{{display-errors errors=model.errors}}
+		{{/if}}
+		{{validated-input-group type="email" placeholder="Enter email" name="email" labelText="Email Address" value=model.email errors=errors.email}}
+		{{validated-input-group type="password" placeholder="Enter password" name="password" labelText="Password" value=model.password errors=errors.password}}	   
+		<button class="btn btn-primary {{if isProcessing 'disabled'}}" type='submit'>Login</button>
+		{{#if isProcessing}}
+				<i class="fa fa-spinner fa-pulse" aria-hidden="true"></i>
+		{{/if}}
+
+	</form>
+{{/unless}}
+
+
+{{#link-to "reset" class='btn btn-link'}}Forgot password?{{/link-to}}
+
+ 

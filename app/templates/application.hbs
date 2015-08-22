@@ -4,11 +4,16 @@
   </h1>
   <nav>
   	{{#unless session.currentUser}}
-    {{#link-to "register"}}Register{{/link-to}}
+      {{#link-to "register"}}Register{{/link-to}}
+     
     {{/unless}}
-
-   {{#link-to "login"}}Login{{/link-to}}
-   {{#link-to "reset"}}Reset{{/link-to}}
+    {{#if session.currentUser}}
+      <a {{action 'signOut'}} class="ember-view btn-link'">Logout</a>
+    {{else}}
+      {{#link-to "login"}}Login{{/link-to}}
+    {{/if}}
+  
+  
   </nav>
 </header>
 <section class="main-content ">
@@ -16,3 +21,4 @@
     {{outlet}}
   </div>
 </section>
+

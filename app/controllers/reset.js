@@ -4,36 +4,48 @@ import EmberValidations from 'ember-validations';
 export default Ember.ObjectController.extend(EmberValidations,{
 validations: {
     email: {
-      presence: true,
-      length: { maximum: 5 }
+      presence: {message: " Email is required"},
+      // validate using HTML5 accepted exceptions 
+      format:{with:/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+  				message:" Email is not valid"}
     },    
   },
 firebase: Ember.inject.service(),
 resetSuccess:false,
+isProcessing:false,
 actions:{
  resetPassword: function(model) {
- 	this.setProperties({
-      resetSuccess: false
+ 	var self = this;
+ 	self.setProperties({
+      resetSuccess: false,
+      isProcessing: true,
     });
-	  
-
 	  this.validate().then(function(){
-		  let ref = this.get('firebase');
-	 	  var email = model.get('email');
-		  console.log("email:"+email);
-		  var self = this;
-	      ref.resetPassword({ email:email}, function(err) {
-			if(!err){
-				Ember.RSVP.Promise.resolve();
-				self.set("resetSuccess", true); 
-				
-			} else {
-				Ember.RSVP.Promise.reject(err);
-				self.set("resetSuccess", false); 
-			}
-     	 });
-  	}).catch(function(){
-  		alert('failed');
+	  	let ref = self.get('firebase');
+	  	var email = model.get('email');
+	  	console.log("email:"+email);
+	  	
+	  	ref.resetPassword({ email:email}, function(err) {
+		  if(!err){
+		  	Ember.RSVP.Promise.resolve();
+			self.set("resetSuccess", true); 					
+		  } else {
+			Ember.RSVP.Promise.reject(err);
+			self.set("resetSuccess", false);	
+			switch (err.code) {
+				case "INVALID_USER":
+					model.get('errors').add('email', 'Email not found');
+				break;
+				default:
+					model.get('errors').add('', 'Unexpected error:'+ err.message);
+					console.log("Error creating user:", err.message);
+			} 				
+		  }
+	    });
+  	}).catch(function(error){
+  		alert('Validation failed:' + error);
+  	}).finally(function(){
+  		self.set("isProcessing", false); 
   	});
    }
 }
