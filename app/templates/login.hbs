@@ -2,14 +2,15 @@
     <button {{action "signOut"}}>Sign Out</button>
 {{else}}
 <form {{action 'signIn' model on="submit"}}> 
+	 <h2>Login</h2>
 	<div class="form-group">
 		<label for="email">Email address</label>
-		{{input name="email" placeholder="Enter email" type="email" value=model.email }}
+		{{validated-input type="email" placeholder="Enter email" value=model.email errors=errors.email}}
 	</div>
 	<div class="form-group">
 		<label for="password">Password</label>
-	     {{input name="password" placeholder="Enter password" type="password" value=model.password }}
+		{{validated-input type="password" placeholder="Enter password" value=model.password errors=errors.password}}
 	</div>
-   <button class="" type='submit'>Sign in</button>
+   <button class="btn btn-primary" type='submit'>Sign in</button>
 </form>
 {{/if}}

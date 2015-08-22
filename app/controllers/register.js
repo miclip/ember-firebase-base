@@ -2,20 +2,19 @@
 import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
-export default Ember.Controller.extend(EmberValidations,{
+export default Ember.ObjectController.extend(EmberValidations,{
 	validations: {
     email: {
-      presence: true,
+      presence: {message:"Email is required"},
       length: { maximum: 5 }
     },    
     password:{
-    	confirmation: true
-    	
-    	
+      presence:{
+        message: " Password is required"
+      },
+    	confirmation: true,
     },
-    passwordConfirmation: {
-  		
-  	}
+   
   },
 firebase: Ember.inject.service(),
 actions:{

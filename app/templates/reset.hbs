@@ -2,14 +2,9 @@
 	<p>An email is on its way to you. Follow the instructions to reset your password.</p>
 {{else unless session.currentUser}}
    <form {{action 'resetPassword' model on="submit"}}> 
-		<div class="form-group">
-			<label for="email">Email address</label>
-			
-			
-				{{validated-input type="email" placeholder="Enter email" value=email errors=errors.email}}
-		
-		</div>
-	   <button class="" type='submit'>Reset</button>
+   	 <h2>Reset Password</h2>
+			{{validated-input-group type="email" placeholder="Enter email" name="email" labelText="Email Address" value=model.email errors=errors.email}}
+	   <button class="btn btn-primary" type='submit'>Reset</button>
 	</form>
 {{/if}}
 

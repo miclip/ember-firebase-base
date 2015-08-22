@@ -1,7 +1,5 @@
 
 {{#unless  session.currentUser}}
-<h3>Register</h3>
-<!-- REGISTER -->
 <form {{action 'registerUser' model on="submit" }}>
 	 <h2>Register</h2>
 	<div class="form-group">
@@ -16,7 +14,6 @@
 		<label for="passwordConfirmation">Confirm Password</label>
 		{{validated-input type="password" placeholder="Confirm password" value=model.passwordConfirmation errors=errors.passwordConfirmation}}
 	</div>	
-	<button class="" type='submit'>Register</button>
+	<button class="btn btn-primary" type='submit'>Register</button>
 </form>
-<!-- / REGISTER -->
 {{/unless}}
