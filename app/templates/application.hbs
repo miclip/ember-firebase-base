@@ -1,12 +1,18 @@
 <header>
-  <h1>
-    {{!-- {{#link-to "index"}}<strong>Fire</strong>Blog{{/link-to}} --}}
+   <h1>
+    {{#link-to "index"}}<strong>Fire</strong>Test{{/link-to}}
   </h1>
   <nav>
-    {{#link-to "account"}}Login{{/link-to}}
-   
+  	{{#unless session.currentUser}}
+    {{#link-to "register"}}Register{{/link-to}}
+    {{/unless}}
+
+   {{#link-to "login"}}Login{{/link-to}}
+   {{#link-to "reset"}}Reset{{/link-to}}
   </nav>
 </header>
-<section class="main-content">
-  {{outlet}}
+<section class="main-content ">
+  <div class="container">
+    {{outlet}}
+  </div>
 </section>
