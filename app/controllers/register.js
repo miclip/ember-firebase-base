@@ -18,16 +18,28 @@ validations: {
     },
   },
 firebase: Ember.inject.service(),
+registerSuccess: false,
 actions:{
  registerUser: function(model) {
-	  let ref = this.get('firebase');
+ 	this.setProperties({
+ 		registerSuccess: false,
+ 	});
+ 	var self = this;
+	  let ref = self.get('firebase');
  	  var email = model.get('email');
 	  console.log("email:"+email);
 	  var password = model.get('password');
 	  this.validate().then(function(){
-	  	ref.createUser({ email:email,password:password, session:"sessionOnly"}, function(err) {
+	  	ref.createUser({ email:email,password:password, session:"sessionOnly"}, function(err, userData) {
 			if(!err){
-				Ember.RSVP.Promise.resolve();	
+				Ember.RSVP.Promise.resolve();
+				console.log("uid:"+userData.uid);
+				  // save firebase id and clear password
+					model.set('id', userData.uid);
+					model.set('password', null);
+					model.set('passwordConfirmation', null);
+					model.save();
+				self.set('registerSuccess', true);
 			} else {
 				Ember.RSVP.Promise.reject(err);
 				switch (err.code) {
@@ -40,7 +52,7 @@ actions:{
 			      default:
 			      	model.get('errors').add('', 'Unexpected error:'+ err.message);
 			        console.log("Error creating user:", err.message);
-			    } 
+			    }
 			}
       	});
 	  }).catch(function(){

@@ -8,12 +8,10 @@
      
     {{/unless}}
     {{#if session.currentUser}}
-      <a {{action 'signOut'}} class="ember-view btn-link'">Logout</a>
+       <a class="ember-view" href="" {{action 'signOut'}}>Logout</a>
     {{else}}
       {{#link-to "login"}}Login{{/link-to}}
     {{/if}}
-  
-  
   </nav>
 </header>
 <section class="main-content ">

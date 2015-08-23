@@ -29,8 +29,8 @@ actions:{
 		  	provider: "password", 
 		  	email:email, 
 		  	password:password, 
-		  	session: "sessionOnly"}).then(function(data) {
-	        console.log(data.currentUser);
+		  	session: "sessionOnly"}).then(function() {
+		  		model.destroyRecord();
     }).catch(function(err){
 			switch (err.code) {
 				case "INVALID_EMAIL":
