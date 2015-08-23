@@ -27,7 +27,7 @@ actions:{
 	  this.validate().then(function(){
 	  	var changes = model.changedAttributes();
 	  	
-	  	if(changes["email"].length>0){
+	  	if(changes && changes["email"] && changes["email"].length>0){
 	  		var oldEmail = changes["email"][0]; console.log('oldemail:'+oldEmail);
 	  		var newEmail = changes["email"][1]; console.log('newemail:'+newEmail);
 	  		ref.changeEmail({oldEmail:oldEmail, newEmail:newEmail, password:password}, function(err) {
