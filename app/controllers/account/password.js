@@ -36,7 +36,6 @@ actions:{
 					if(!err){
 						Ember.RSVP.Promise.resolve();
 						self.set('modelSuccess', true);
-						model.destoryRecord();
 					} else {
 						Ember.RSVP.Promise.reject(err);
 						switch (err.code) {
@@ -56,6 +55,10 @@ actions:{
 	  }).catch(function(err){
 	  	model.get('errors').add('', 'Unexpected error:'+ err);
   		console.log('Failed, errors exist: '+ err );
+  	}).finally(function(){
+  		model.set('newPassword', null);
+			model.set('newPasswordConfirmation', null);
+			model.set('oldPassword', null);
   	});
       
     }

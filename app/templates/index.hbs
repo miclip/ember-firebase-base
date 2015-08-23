@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="col-md-12">
+		<br/>
+		{{#if session.currentUser}}
+			{{#if model}}
+					<p>Welcome <strong>{{model.displayName}}</strong>, thanks for testing out the platform. </p>
+			{{/if}}
+		{{/if}}
+		<p><strong>FireTest</strong> is a sandbox application to test out features of Ember and Firebase.</p>
+	</div>
+</div>

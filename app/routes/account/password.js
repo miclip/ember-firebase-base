@@ -7,13 +7,7 @@ export default Ember.Route.extend({
 		}
 	},
 	model: function(){
-			var uid = this.get('session').get('currentUser').get('id');
-			var self = this;
-			var user;
-	    self.store.find('user',uid).then(function(user){
-	    		console.log("email:"+user.email);
-	    		user = self.get('store').createRecord('change-password',{email:user.get('email')});	
-	    });
-	    return user;
+			var email = this.get('session').get('currentUser').get('email');
+			return this.get('store').createRecord('change-password',{email:email});	
 	},
 });

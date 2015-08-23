@@ -15,7 +15,7 @@
 		{{display-errors errors=model.errors}}
 	{{/if}}
 	{{validated-input-group type="email" placeholder="Enter email" name="email" required=true labelText="Email Address" value=model.email errors=errors.email}}
-	{{validated-input-group type="text" placeholder="Enter display name" name="displayName" labelText="Display Name" value=model.displayName errors=errors.name}}
+	{{validated-input-group type="text" placeholder="Enter name" name="name" labelText="Name" value=model.name errors=errors.name}}
 	{{validated-input-group type="password" placeholder="Enter password" name="password" required=true labelText="Confirm Change" value=model.password errors=errors.password}}
 	
 	<button class="btn btn-primary" type='submit'>Update</button>

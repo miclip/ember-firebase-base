@@ -31,6 +31,7 @@ actions:{
 		  	password:password, 
 		  	session: "sessionOnly"}).then(function() {
 		  		model.destroyRecord();
+		  		self.transitionTo("index");
     }).catch(function(err){
 			switch (err.code) {
 				case "INVALID_EMAIL":
