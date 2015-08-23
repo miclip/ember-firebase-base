@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"c",
+				"currentUser"
+			],
+			[
+				"isA",
+				"isAuthenticated"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"par",
+				"parsedHtml"
+			],
+			[
+				"pr",
+				"presence"
+			],
+			[
+				"reset",
+				"resetSuccess"
+			],
+			[
 				"tr",
 				"transitionToIndex"
 			]
@@ -12,34 +36,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/templates/account.hbs",
-			"settings":
-			{
-				"buffer_size": 417,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/templates/account/password.hbs",
-			"settings":
-			{
-				"buffer_size": 1141,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/change-password.js",
-			"settings":
-			{
-				"buffer_size": 209,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/routes/account/password.js",
 			"settings":
 			{
-				"buffer_size": 493,
+				"buffer_size": 352,
 				"line_ending": "Windows"
 			}
 		},
@@ -47,15 +47,47 @@
 			"file": "app/controllers/account/password.js",
 			"settings":
 			{
-				"buffer_size": 1904,
+				"buffer_size": 2019,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/templates/components/display-errors.hbs",
+			"file": "app/models/user.js",
 			"settings":
 			{
-				"buffer_size": 347,
+				"buffer_size": 348,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/templates/index.hbs",
+			"settings":
+			{
+				"buffer_size": 335,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/routes/index.js",
+			"settings":
+			{
+				"buffer_size": 299,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/templates/account/manage.hbs",
+			"settings":
+			{
+				"buffer_size": 1027,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/templates/account.hbs",
+			"settings":
+			{
+				"buffer_size": 393,
 				"line_ending": "Windows"
 			}
 		}
@@ -68,7 +100,7 @@
 		[
 			[
 				"Package Control: ",
-				"Package Control: Install Package"
+				"Package Control: Discover Packages"
 			],
 			[
 				"set syntax: js",
@@ -99,7 +131,7 @@
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 125.0
 	},
 	"distraction_free":
 	{
@@ -112,32 +144,46 @@
 	},
 	"file_history":
 	[
-		"/C/Projects/Ember/firebase-test/app/templates/application.hbs",
+		"/C/Projects/Ember/firebase-test/app/controllers/login.js",
+		"/C/Projects/Ember/firebase-test/app/controllers/register.js",
+		"/C/Projects/Ember/firebase-test/app/torii-adapters/application.js",
+		"/C/Projects/Ember/firebase-test/app/controllers/account.js",
+		"/C/Projects/Ember/firebase-test/app/templates/register.hbs",
+		"/C/Projects/Ember/firebase-test/app/templates/login.hbs",
 		"/C/Projects/Ember/firebase-test/app/router.js",
 		"/C/Projects/Ember/firebase-test/app/templates/account.hbs",
-		"/C/Projects/Ember/firebase-test/app/templates/account/manage.hbs",
-		"/C/Projects/Ember/firebase-test/app/templates/account/password.hbs",
-		"/C/Projects/Ember/firebase-test/app/controllers/account/password.js",
-		"/C/Projects/Ember/firebase-test/app/routes/application.js",
-		"/C/Projects/Ember/firebase-test/app/controllers/account.js",
-		"/C/Projects/Ember/firebase-test/ember-cli-build.js",
 		"/C/Projects/Ember/firebase-test/app/routes/account.js",
-		"/C/Projects/Ember/firebase-test/app/routes/account/password.js",
-		"/C/Projects/Ember/firebase-test/app/controllers/register.js",
+		"/C/Projects/Ember/firebase-test/app/routes/index.js",
+		"/C/Projects/Ember/firebase-test/app/templates/application.hbs",
+		"/C/Projects/Ember/firebase-test/app/templates/index.hbs",
+		"/C/Projects/Ember/firebase-test/app/routes/login.js",
+		"/C/Projects/Ember/firebase-test/app/models/user.js",
 		"/C/Projects/Ember/firebase-test/app/templates/components/validated-input-group.hbs",
 		"/C/Projects/Ember/firebase-test/app/styles/app.css",
-		"/C/Projects/Ember/firebase-test/app/controllers/account/manage.js",
-		"/C/Projects/Ember/firebase-test/app/routes/account/manage.js",
-		"/C/Projects/Ember/firebase-test/README.md",
-		"/C/Users/Michael/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/C/Projects/Ember/firebase-test/app/templates/auth.hbs",
-		"/C/Projects/Ember/firebase-test/app/components/register.hbs",
-		"/C/Projects/Ember/firebase-test/bower.json",
+		"/C/Projects/Ember/firebase-test/app/controllers/reset.js",
+		"/C/Projects/Ember/firebase-test/app/routes/application.js",
+		"/C/Projects/Ember/firebase-test/app/routes/logout.js",
+		"/C/Projects/Ember/firebase-test/app/controllers/logout.js",
+		"/C/Projects/Ember/firebase-test/ember-cli-build.js",
+		"/C/Projects/Ember/firebase-test/app/templates/reset.hbs",
+		"/C/Projects/Ember/firebase-test/app/templates/components/display-errors.hbs",
 		"/C/Projects/Ember/firebase-test/config/environment.js",
-		"/C/Projects/Ember/firebase-test/app/torii-adapters/application.js",
+		"/C/Users/Michael Lipscombe/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Projects/Ember/firebase-test/app/templates/components/validated-input.hbs",
+		"/C/Projects/Ember/firebase-test/app/helpers/label.js",
+		"/C/Projects/Ember/firebase-test/bower_components/bootstrap/dist/css/bootstrap.css",
+		"/C/Projects/Ember/firebase-test/app/components/validated-input-group.js",
+		"/C/Projects/Ember/firebase-test/app/routes/reset.js",
+		"/C/Projects/Ember/firebase-test/app/components/validated-input.js",
+		"/C/Projects/Ember/firebase-test/package.json",
+		"/C/Projects/Ember/firebase-test/bower.json",
+		"/C/Projects/Ember/base-app/bower.json",
+		"/C/Projects/Ember/firebase-test/app/models/post.js",
+		"/C/Projects/Ember/firebase-test/app/app.js",
+		"/C/Projects/Ember/firebase-test/app/routes/register.js",
 		"/C/Projects/Ember/firebase-test/app/controllers/index.js",
 		"/C/Projects/Ember/firebase-test/app/index.html",
-		"/C/Projects/Ember/firebase-test/app/routes/index.js",
+		"/C/Projects/Ember/firebase-test/app/templates/auth.hbs",
 		"/C/Projects/Ember/test-app-v2/app/templates/users/register.hbs",
 		"/C/Projects/Ember/test-app-v2/app/templates/application.hbs",
 		"/C/Projects/Ember/test-app-v2/bower.json",
@@ -164,6 +210,7 @@
 		"/C/Projects/Ember/test-app-v2/ember-cli-build.js",
 		"/C/Projects/Ember/test-app-v2/app/controllers/users/new.js",
 		"/C/Projects/Ember/test-app-v2/dist/assets/vendor.css",
+		"/C/Users/Michael/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Michael/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Michael/AppData/Roaming/Sublime Text 2/Packages/sublime-ember-script-master/README.md",
 		"/C/Projects/Ember/test-app-v2/dist/assets/vendor.js",
@@ -186,13 +233,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"error",
+			"confirmPassword"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"passwordConfirmation"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -203,102 +253,23 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/templates/account.hbs",
-					"settings":
-					{
-						"buffer_size": 417,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								403,
-								403
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/templates/account/password.hbs",
-					"settings":
-					{
-						"buffer_size": 1141,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								315,
-								315
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/models/change-password.js",
-					"settings":
-					{
-						"buffer_size": 209,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								209,
-								209
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "app/routes/account/password.js",
 					"settings":
 					{
-						"buffer_size": 493,
+						"buffer_size": 352,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								395,
-								395
+								344,
+								344
 							]
 						],
 						"settings":
@@ -313,19 +284,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 1,
 					"file": "app/controllers/account/password.js",
 					"settings":
 					{
-						"buffer_size": 1904,
+						"buffer_size": 2019,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1215,
-								1215
+								1714,
+								1714
 							]
 						],
 						"settings":
@@ -339,19 +310,124 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/templates/components/display-errors.hbs",
+					"buffer": 2,
+					"file": "app/models/user.js",
 					"settings":
 					{
-						"buffer_size": 347,
+						"buffer_size": 348,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								347,
-								347
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/templates/index.hbs",
+					"settings":
+					{
+						"buffer_size": 335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/routes/index.js",
+					"settings":
+					{
+						"buffer_size": 299,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								212,
+								212
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/templates/account/manage.hbs",
+					"settings":
+					{
+						"buffer_size": 1027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								754,
+								754
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/templates/account.hbs",
+					"settings":
+					{
+						"buffer_size": 393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
 							]
 						],
 						"settings":
@@ -400,7 +476,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

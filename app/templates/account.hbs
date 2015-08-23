@@ -2,8 +2,8 @@
 		<div class="col-md-12">
 			<br/>
 			<ul class="nav nav-pills">
-				{{#link-to "account.manage" role="presentation" tagName="li" href=false}}<a {{bind-attr href="view.href"}}>Manage Account</a>{{/link-to}}
-				{{#link-to "account.password" role="presentation" tagName="li" href=false}}<a {{bind-attr href="view.href"}}>Change Password</a>{{/link-to}}
+				{{#link-to "account.manage" role="presentation" tagName="li" href=false}}<a {{href:view.href}}>Manage Account</a>{{/link-to}}
+				{{#link-to "account.password" role="presentation" tagName="li" href=false}}<a {{href:view.href}}>Change Password</a>{{/link-to}}
 			</ul>
 		</div>		
 	</div>

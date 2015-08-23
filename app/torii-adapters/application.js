@@ -86,7 +86,6 @@ export default Ember.Object.extend({
 
     return {
       id: authData.uid,
-      name: name,
       email: userData.email || null
     };
   }
