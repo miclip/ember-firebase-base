@@ -14,6 +14,9 @@ validations: {
       presence:{
         message: " Password is required"
       },
+      format:{with:/^(?=.*[A-Z])(?=.*[!.@#$&*])(?=.*[0-9])(?=.*[a-z]).{6,}$/,
+      	message:" Password must be longer than 6, at least 1 digit, 1 special !.@#$&*, 1 upper & 1 lower case letter"
+      },
     	confirmation: true,
     },
   },
