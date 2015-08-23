@@ -8,6 +8,7 @@
      
     {{/unless}}
     {{#if session.currentUser}}
+       {{#link-to "account"}}Account{{/link-to}}
        <a class="ember-view" href="" {{action 'signOut'}}>Logout</a>
     {{else}}
       {{#link-to "login"}}Login{{/link-to}}
