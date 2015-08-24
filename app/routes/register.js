@@ -1,4 +1,4 @@
-// app/routes/account.js
+// app/routes/register.js
 import Ember from 'ember';
 
 export default Ember.Route.extend({
