@@ -1,5 +1,5 @@
 # Firebase-test
-[![Build Status](https://travis-ci.org/miclip/Firebase-test.svg?branch=master)](https://travis-ci.org/miclip/Firebase-test)
+[![Build Status](https://travis-ci.org/miclip/firebase-test.svg?branch=master)](https://travis-ci.org/miclip/firebase-test)
 
 App to test out Ember and Firebase features. 
 
