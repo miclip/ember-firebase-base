@@ -14,6 +14,7 @@
     "qunit": "~1.18.0",
     "firebase": "^2.1.0",
     "JavaScript-MD5": "~1.1.1",
-	"font-awesome": "^4.4.0"
+	"font-awesome": "^4.4.0",
+	"bootstrap":"~3.3.5"
   }
 }
