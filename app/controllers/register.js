@@ -39,7 +39,7 @@ actions:{
 				console.log("uid:"+userData.uid);
 				  // save firebase id and clear password
 					model.set('id', userData.uid);
-					model.set('name',null),
+					model.set('name',null);
 					model.set('password', null);
 					model.set('passwordConfirmation', null);
 					model.save();
