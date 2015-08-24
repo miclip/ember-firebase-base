@@ -68,6 +68,12 @@ header nav {
     border-radius: 20px;
   }
 
+  header nav img {
+     display: inline-block !important;;
+     margin: 0 0 0 1em;
+     padding: 0.35em 0.75em;
+  }
+
   header nav a:hover {
     background-color: #379ae9;
     color: #FFF;
@@ -93,3 +99,19 @@ header nav {
  .required-asterisk{
   font-size:1.3em;
  }
+
+
+.row-bottom {
+    font-size: 0;
+}
+.row-bottom > * {
+    float: none;
+    display: inline-block;
+    font-size: 14px; /* if using LESS it's quicker to just use @font-size-base */
+}
+.row-bottom > *:last-child {
+    vertical-align: bottom;
+}
+.row-bottom p:last-child {
+    margin-bottom: 0; /* optional */
+}

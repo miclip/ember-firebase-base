@@ -1,7 +1,19 @@
 <div class="row">
 		<div class="col-md-12">
 			<br/>
-			<ul class="nav nav-pills">
+		</div>
+</div>
+
+<div class="row row-bottom">
+	<div class="col-md-2">
+		{{gravatar-image email=session.currentUser.email 
+				  defaultImage='identicon'
+				  class='img-responsive img-rounded'
+				  size=150}}
+	</div>
+		<div class="col-md-10">
+			
+			<ul class="nav nav-pills pull-left">
 				{{#link-to "account.manage" role="presentation" tagName="li" href=false}}<a {{href:view.href}}>Manage Account</a>{{/link-to}}
 				{{#link-to "account.password" role="presentation" tagName="li" href=false}}<a {{href:view.href}}>Change Password</a>{{/link-to}}
 			</ul>

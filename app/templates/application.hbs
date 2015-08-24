@@ -7,8 +7,13 @@
       {{#link-to "register"}}Register{{/link-to}}     
     {{/unless}}
     {{#if session.currentUser}}
+   
        {{#link-to "account.manage"}}Account{{/link-to}}
        <a class="ember-view" href="" {{action 'signOut'}}>Logout</a>
+        {{gravatar-image email=session.currentUser.email 
+          defaultImage='identicon'
+          class='img-circle img-responsive'
+          size=60}}
     {{else}}
       {{#link-to "login"}}Login{{/link-to}}
     {{/if}}
