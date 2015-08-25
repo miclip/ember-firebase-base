@@ -12,8 +12,8 @@ Router.map(function() {
   this.resource('account',{ path: '/account' }, function(){
 		this.route('password');
 		this.route('manage');
+		this.route('delete');
 		
   });
 });
-
 export default Router;

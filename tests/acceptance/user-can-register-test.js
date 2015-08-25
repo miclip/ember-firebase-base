@@ -6,12 +6,10 @@ module('Acceptance | user can register', {
   beforeEach: function() {
     this.application = startApp();
   },
-
   afterEach: function() {
-    
-if ( !(this.application.get('isDestroyed') || this.application.get('isDestroying')) ) {
-    Ember.run(this.application, 'destroy');
-  }
+    if ( !(this.application.get('isDestroyed') || this.application.get('isDestroying')) ) {
+      Ember.run(this.application, 'destroy');
+    }
   }
 });
 
@@ -23,7 +21,7 @@ test('visiting /register', function(assert) {
   });
   // register user
   var randomNumber = Math.floor((Math.random() * 100000) + 1);
-  fillIn('input[name="email"]','test'+randomNumber+'@qunit-test.com');
+  fillIn('input[name="email"]','test'+randomNumber+'@qunit-firebase-test.com');
   fillIn('input[name="password"]','Outlook.1');
   fillIn('input[name="passwordConfirmation"]','Outlook.1');
   click('button[type="submit"]');
