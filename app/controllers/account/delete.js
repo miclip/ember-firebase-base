@@ -29,13 +29,12 @@ actions:{
 			ref.removeUser({email:email,password:password}, function(err) {
 						if(!err){
 							Ember.RSVP.Promise.resolve();
-							self.get('store').unloadAll('user');
-					self.get("session").close();
 							self.set('modelSuccess', true);
-
 							model.set('deleted', true);
 							model.set('deletedDate', new Date());
-
+							model.save();
+							self.get('store').unloadAll('user');
+							self.get("session").close();
 							self.transitionTo('index');
 						} else {
 							Ember.RSVP.Promise.reject(err);

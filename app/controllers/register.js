@@ -42,6 +42,7 @@ actions:{
 					model.set('name',null);
 					model.set('password', null);
 					model.set('passwordConfirmation', null);
+					model.set('createdDate',new Date());
 					model.save();
 				self.set('registerSuccess', true);
 			} else {

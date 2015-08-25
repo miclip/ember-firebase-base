@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 		}
 	},
 	model: function(){
-			var uid = this.get('session').get('currentUser').get('id');
+		var uid = this.get('session').get('currentUser').get('id');
 	    return this.store.find('user',uid);
 	},
 });
