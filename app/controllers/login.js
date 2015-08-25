@@ -37,6 +37,9 @@ actions:{
 				case "INVALID_EMAIL":
 					model.get('errors').add('email', 'User not found');
 				break;
+				case "INVALID_USER":
+					model.get('errors').add('email', 'No such user');
+				break;
 				case "INVALID_PASSWORD":
 					model.get('errors').add('password', 'Password is incorrect');
 				break;
