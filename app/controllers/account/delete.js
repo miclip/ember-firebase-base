@@ -60,7 +60,10 @@ actions:{
 			model.set('deletedDate', new Date());
 			model.save().then(function(){
 				console.log('record saved!');
-				self.transition('login');
+				self.get('store').unloadAll('user');
+				console.log("state:"+self.get("session").get('state'));
+      	self.get("session").close();
+      	self.transitionTo('index');
 			});
 			
 		  }).catch(function(){
