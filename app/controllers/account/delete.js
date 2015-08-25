@@ -19,39 +19,39 @@ validations: {
 actions:{
 	removeUser: function(model) {
 		var self = this;
+		let ref = self.get('firebase');
  		self.setProperties({
     	modelSuccess: true,
     });
 	 	var email = model.get('email');
-	  var password = model.get('password');
-	  self.validate().then(function(){
+		var password = model.get('password');
+		self.validate().then(function(){
+			ref.removeUser({email:email,password:password}, function(err) {
+						if(!err){
+							Ember.RSVP.Promise.resolve();
+							self.get('store').unloadAll('user');
+					self.get("session").close();
+							self.set('modelSuccess', true);
 
-	  	ref.removeUser({email:email,password:password}, function(err) {
-					if(!err){
-						Ember.RSVP.Promise.resolve();
-						this.get('store').unloadAll('user');
-      			this.get("session").close();
-						self.set('modelSuccess', true);
+							model.set('deleted', true);
+							model.set('deletedDate', new Date());
 
-						model.set('deleted', true);
-						model.set('deletedDate', new Date());
-
-						this.transitionTo('index');
-					} else {
-						Ember.RSVP.Promise.reject(err);
-						switch (err.code) {
-					      case "INVALID_PASSWORD":
-					      	model.get('errors').add('password', 'Invalid password');
-					        break;
-					      case "INVALID_USER":
-					      	model.get('errors').add('email', 'Could not find user');					      	
-					        break;
-					      default:
-					      	model.get('errors').add('', 'Unexpected error:'+ err.message);
-					      	console.log("Error creating user:", err.message);
-					    }
-					}
-      	});
+							self.transitionTo('index');
+						} else {
+							Ember.RSVP.Promise.reject(err);
+							switch (err.code) {
+							  case "INVALID_PASSWORD":
+								model.get('errors').add('password', 'Invalid password');
+								break;
+							  case "INVALID_USER":
+								model.get('errors').add('email', 'Could not find user');					      	
+								break;
+							  default:
+								model.get('errors').add('', 'Unexpected error:'+ err.message);
+								console.log("Error creating user:", err.message);
+							}
+						}
+			});
 		  }).catch(function(){
 		  	alert('unepxected validation errors');
 		  });
