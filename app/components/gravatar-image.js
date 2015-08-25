@@ -1,3 +1,4 @@
+//https://github.com/johnotander/ember-cli-gravatar
 import Ember from 'ember';
 
 export default Ember.Component.extend({

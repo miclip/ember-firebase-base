@@ -8,7 +8,10 @@ module('Acceptance | user can register', {
   },
 
   afterEach: function() {
+    
+if ( !(this.application.get('isDestroyed') || this.application.get('isDestroying')) ) {
     Ember.run(this.application, 'destroy');
+  }
   }
 });
 
@@ -18,14 +21,15 @@ test('visiting /register', function(assert) {
   andThen(function() {
     assert.equal(currentURL(), '/register');
   });
-  
-  fillIn('input[name="email"]','test4@someemail.com');
+  // register user
+  var randomNumber = Math.floor((Math.random() * 100000) + 1);
+  fillIn('input[name="email"]','test'+randomNumber+'@qunit-test.com');
   fillIn('input[name="password"]','Outlook.1');
   fillIn('input[name="passwordConfirmation"]','Outlook.1');
   click('button[type="submit"]');
   
   andThen(function() {
-    assert.expect(find('div .alert-success').length);
+    assert.ok(find('div .alert-success'));
   });
  
 });
