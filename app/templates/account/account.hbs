@@ -18,8 +18,8 @@
 	{{#if model.errors}}
 		{{display-errors errors=model.errors}}
 	{{/if}}
-	{{validated-input-group type="email" placeholder="Enter email" name="email" hasValidationErrors=hasValidationErrors required=true labelText="Email Address" value=model.email errors=errors.email}}
-	{{validated-input-group type="password" placeholder="Enter password" name="password" hasValidationErrors=hasValidationErrors required=true labelText="Confirm Deletion" value=model.password errors=errors.password}}	
+	{{validated-input-group type="email" placeholder="Enter email" name="email" hasValidationErrors=hasValidationErrors required=true labelText="Email Address" value=model.email errors=errors.validationModel.email}}
+	{{validated-input-group type="password" placeholder="Enter password" name="password" hasValidationErrors=hasValidationErrors required=true labelText="Confirm Deletion" value=model.password errors=errors.validationModel.password}}	
 	<button class="btn btn-primary" type='submit'>Remove User</button>
 </form>
 

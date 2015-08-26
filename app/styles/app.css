@@ -84,11 +84,11 @@ header nav {
  */
 
  .error-message{
-  border-color: #a94442;
+  border-color: rgb(217, 83, 79);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-  color: #a94442;  
-  border-color: #a94442;
+  color: rgb(217, 83, 79);  
+  border-color: rgb(217, 83, 79);
   margin-top: 3px;
  }
 

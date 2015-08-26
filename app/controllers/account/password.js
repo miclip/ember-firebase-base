@@ -2,15 +2,16 @@
 import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
-export default Ember.ObjectController.extend(EmberValidations,{
+export default Ember.Controller.extend(EmberValidations,{
 hasValidationErrors: false,
+validationModel: Ember.computed.alias('model'),
 validations: {
-	oldPassword:{
+	'validationModel.oldPassword':{
       presence:{
         message: " Current password is required"
       }
 	},
-    newPassword:{
+    'validationModel.newPassword':{
       presence:{
         message: " New password is required"
       },

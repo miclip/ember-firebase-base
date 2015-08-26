@@ -1,17 +1,14 @@
 
-<div class="form-group {{if showError 'has-error has-feedback'}} {{unless showSuccess 'has-success has-feedback'}}">
+<div class="form-group {{if showError 'has-error '}} {{if showSuccess 'has-success'}}">
 		{{label labelText for=name class="control-label"}} {{#if required}}<span class="required-asterisk red">*</span>{{/if}}
-		
-		{{input value=value name=name class="form-control" focus-out="showErrors" type=type placeholder=placeholder}}
 		{{#if showError}}
-			<i class="fa fa-times form-control-feedback" aria-hidden="true"></i>
-	  		<span id="{{name}}Error2Status" class="sr-only">(error)</span>
-	  		{{#if showError}}
-	  			<p class="error-message">{{errors}}</p>
-			{{/if}}
-  		{{/if}}
-  		{{#unless errors}}
-			<i class="fa fa-ok form-control-feedback" aria-hidden="true"></i>
-	  		<span id="{{name}}Success2Status" class="sr-only">(success)</span>	  		
-  		{{/unless}}
+			{{input value=value name=name class="form-control form-control-error"  focus-out="showErrors" type=type placeholder=placeholder}}
+		{{else if showSuccess}}
+			{{input value=value name=name class="form-control form-control-success"  focus-out="showErrors" type=type placeholder=placeholder}}
+		{{else}}
+			{{input value=value name=name class="form-control" focus-out="showErrors" type=type placeholder=placeholder}}
+		{{/if}}		
+		{{#if showError}}
+	  	<p class="error-message">{{errors}}</p>
+		{{/if}} 		
 </div>

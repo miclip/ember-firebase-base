@@ -2,17 +2,18 @@
 import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
-export default Ember.ObjectController.extend(EmberValidations,{
+export default Ember.Controller.extend(EmberValidations,{
 isProcessing: false,
+validationModel: Ember.computed.alias('model'),
 hasValidationErrors: false,
 validations: {
-    email: {
+    'validationModel.email': {
       presence: {message: " Email is required"},
       // validate using HTML5 accepted exceptions 
       format:{with:/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
   				message:" Email is not valid"}
     },
-    password:{
+    'validationModel.password':{
     	presence:{ message: " Password is required"}
     }    
 },
@@ -51,7 +52,6 @@ actions:{
 
     });
 		  }).catch(function(){
-		  	console.log('unepxected validation errors');
 		  	self.set('hasValidationErrors',true);
 		  }).finally(function(){
     		self.set('isProcessing',false);

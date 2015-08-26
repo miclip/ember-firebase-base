@@ -7,14 +7,15 @@
 		<i class="fa fa-ok"></i>
 	</div>	
 {{else unless session.currentUser}}
+
 		<form {{action 'registerUser' model on="submit" }}>
 			<h2>Register</h2>
 			{{#if model.errors}}
 				{{display-errors errors=model.errors}}
 			{{/if}}
-			{{validated-input-group type="email" placeholder="Enter email" name="email" hasValidationErrors=hasValidationErrors labelText="Email Address" value=model.email errors=errors.email}}
-			{{validated-input-group type="password" placeholder="Enter password" name="password" hasValidationErrors=hasValidationErrors labelText="Password" value=model.password errors=errors.password}}
-			{{validated-input-group type="password" placeholder="Confirm password" hasValidationErrors=hasValidationErrors name="passwordConfirmation" labelText="Confirm Password" value=model.passwordConfirmation errors=errors.passwordConfirmation}}
+			{{validated-input-group type="email" placeholder="Enter email" name="email" hasValidationErrors=hasValidationErrors labelText="Email Address" value=model.email errors=errors.validationModel.email}}
+			{{validated-input-group type="password" placeholder="Enter password" name="password" hasValidationErrors=hasValidationErrors labelText="Password" value=model.password errors=errors.validationModel.password}}
+			{{validated-input-group type="password" placeholder="Confirm password" hasValidationErrors=hasValidationErrors name="passwordConfirmation" labelText="Confirm Password" value=model.passwordConfirmation errors=errors.validationModel.passwordConfirmation}}
 			<button class="btn btn-primary" type='submit'>Register</button>
 		</form>
 {{/if}}
