@@ -30,14 +30,8 @@ actions:{
 			ref.removeUser({email:email,password:password}, function(err) {
 				if(!err){
 					Ember.RSVP.Promise.resolve();
-					self.set('modelSuccess', true);
-					self.get('store').unloadAll('user');
-					self.get("session").close();
 				} else {
-					// back out on error 
-					model.set('isDeleted', false);
-					model.set('deletedDate', null);
-					model.save();
+					
 					Ember.RSVP.Promise.reject(err);
 					switch (err.code) {
 					  case "INVALID_PASSWORD":
@@ -59,12 +53,10 @@ actions:{
 			model.set('isDeleted', true);
 			model.set('deletedDate', new Date());
 			model.save().then(function(){
-				console.log('record saved!');
-				self.get('store').unloadAll('user');
-				console.log("state:"+self.get("session").get('state'));
-      	self.get("session").close();
-      	self.transitionTo('index');
-			});
+					  model.unloadRecord();
+					  self.get("session").close();
+					  self.transitionTo('index');
+			});	
 			
 		  }).catch(function(){
 		  	alert('unepxected validation errors');
