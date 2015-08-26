@@ -55,6 +55,7 @@ actions:{
       	});
 	  	 
 	  }).catch(function(err){
+	  	model.get('errors').add('', 'Unexpected error:'+ err);
 	  	self.set('hasValidationErrors',true);
   	}).finally(function(){
   		model.set('newPassword', null);

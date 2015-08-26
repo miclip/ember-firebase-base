@@ -44,8 +44,8 @@ actions:{
 			} 				
 		  }
 	    });
-  	}).catch(function(error){
-  		console.log('unepxected validation errors');
+  	}).catch(function(err){
+  		model.get('errors').add('', 'Unexpected error:'+ err);
 		  	self.set('hasValidationErrors',true);
   	}).finally(function(){
   		self.set("isProcessing", false); 

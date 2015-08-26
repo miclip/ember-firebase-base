@@ -12,9 +12,6 @@ export default Ember.Route.extend({
 				model.deleteRecord();
 			}
 	},
-	willtransition: function(transition){
-
-	}
-
+	
 
 });

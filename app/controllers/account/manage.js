@@ -65,6 +65,7 @@ actions:{
 				self.set('modelSuccess', true);
 	  	}
 	  }).catch(function(err){
+	  	model.get('errors').add('', 'Unexpected error:'+ err);
   		self.set('hasValidationErrors',true);
   	});
       
