@@ -10,4 +10,8 @@ export default Ember.Route.extend({
 			var email = this.get('session').get('currentUser').get('email');
 			return this.get('store').createRecord('change-password',{email:email});	
 	},
+	deactivate: function(){
+			var model = this.get('controller.model');
+			model.deleteRecord();
+	},
 });

@@ -6,7 +6,7 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   password: DS.attr('string'),
   passwordConfirmation: DS.attr('string'),
-  isDeleted: DS.attr('boolean', {defaultValue:false}),
+  deleted: DS.attr('boolean', {defaultValue:false}),
   deletedDate: DS.attr('date'),
   createdDate: DS.attr('date'),
   displayName: Ember.computed('name', 'email', function() {

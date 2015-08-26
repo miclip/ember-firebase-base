@@ -50,7 +50,7 @@ actions:{
 			});
 			// set user as deleted 
 			model.set('password', null);
-			model.set('isDeleted', true);
+			model.set('deleted', true);
 			model.set('deletedDate', new Date());
 			model.save().then(function(){
 					  model.unloadRecord();
