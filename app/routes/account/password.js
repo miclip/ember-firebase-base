@@ -12,6 +12,8 @@ export default Ember.Route.extend({
 	},
 	deactivate: function(){
 			var model = this.get('controller.model');
-			model.deleteRecord();
+			if(model.get('isNew')){
+				model.deleteRecord();
+			}
 	},
 });

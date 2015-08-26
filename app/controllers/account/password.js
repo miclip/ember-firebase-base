@@ -3,6 +3,7 @@ import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
 export default Ember.ObjectController.extend(EmberValidations,{
+hasValidationErrors: false,
 validations: {
 	oldPassword:{
       presence:{
@@ -53,8 +54,7 @@ actions:{
       	});
 	  	 
 	  }).catch(function(err){
-	  	model.get('errors').add('', 'Unexpected error:'+ err);
-  		console.log('Failed, errors exist: '+ err );
+	  	self.set('hasValidationErrors',true);
   	}).finally(function(){
   		model.set('newPassword', null);
 			model.set('newPasswordConfirmation', null);

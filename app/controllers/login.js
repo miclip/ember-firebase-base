@@ -3,7 +3,8 @@ import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
 export default Ember.ObjectController.extend(EmberValidations,{
-isProcessing:false,
+isProcessing: false,
+hasValidationErrors: false,
 validations: {
     email: {
       presence: {message: " Email is required"},
@@ -50,9 +51,10 @@ actions:{
 
     });
 		  }).catch(function(){
-		  	alert('unepxected validation errors');
+		  	console.log('unepxected validation errors');
+		  	self.set('hasValidationErrors',true);
 		  }).finally(function(){
-    	self.set('isProcessing',false);
+    		self.set('isProcessing',false);
     });
 	}
 }	

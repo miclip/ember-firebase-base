@@ -1,5 +1,5 @@
 
-<div class="form-group {{if showError 'has-error has-feedback'}} {{unless errors 'has-success has-feedback'}}">
+<div class="form-group {{if showError 'has-error has-feedback'}} {{unless showSuccess 'has-success has-feedback'}}">
 		{{label labelText for=name class="control-label"}} {{#if required}}<span class="required-asterisk red">*</span>{{/if}}
 		
 		{{input value=value name=name class="form-control" focus-out="showErrors" type=type placeholder=placeholder}}

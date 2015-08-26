@@ -3,6 +3,7 @@ import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
 export default Ember.ObjectController.extend(EmberValidations,{
+hasValidationErrors: false,
 modelSuccess:false,
 firebase: Ember.inject.service(),
 validations: {
@@ -31,7 +32,7 @@ actions:{
 				if(!err){
 					Ember.RSVP.Promise.resolve();
 				} else {
-					
+					model.set('modelSuccess', false);
 					Ember.RSVP.Promise.reject(err);
 					switch (err.code) {
 					  case "INVALID_PASSWORD":
@@ -59,7 +60,7 @@ actions:{
 			});	
 			
 		  }).catch(function(){
-		  	alert('unepxected validation errors');
+		  	self.set('hasValidationErrors',true);
 		  });
 	}
 }	

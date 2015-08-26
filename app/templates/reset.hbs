@@ -12,7 +12,7 @@
 		{{#if model.errors}}
 		  {{display-errors errors=model.errors}}
 		{{/if}}
-		{{validated-input-group type="email" placeholder="Enter email" name="email" labelText="Email Address" value=model.email errors=errors.email}}
+		{{validated-input-group type="email" placeholder="Enter email" name="email" hasValidationErrors=hasValidationErrors labelText="Email Address" value=model.email errors=errors.email}}
 	   <button class="btn btn-primary {{if isProcessing 'disabled'}}" type='submit'>Reset</button>
 	   {{#if isProcessing}}
 	   		<i class="fa fa-spinner fa-pulse" aria-hidden="true"></i>
