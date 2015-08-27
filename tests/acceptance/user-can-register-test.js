@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
-import startApp from 'firebase-test/tests/helpers/start-app';
+import startApp from 'ember-firebase-base/tests/helpers/start-app';
 
 module('Acceptance | user can register', {
   beforeEach: function() {
