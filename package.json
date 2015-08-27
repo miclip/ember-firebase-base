@@ -1,5 +1,5 @@
 {
-  "name": "firebase-test",
+  "name": "ember-firebase-base",
   "version": "0.0.0",
   "description": "Small description for firebase-test goes here",
   "private": true,

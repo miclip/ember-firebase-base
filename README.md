@@ -1,7 +1,16 @@
-# Firebase-test
-[![Build Status](https://travis-ci.org/miclip/firebase-test.svg?branch=master)](https://travis-ci.org/miclip/firebase-test)
+# ember-firebase-base
+[![Build Status](https://travis-ci.org/miclip/ember-firebase-base.svg?branch=master)](https://travis-ci.org/miclip/ember-firebase-base)
 
-App to test out Ember and Firebase features. 
+Base project Ember and Firebase.
+
+Uses:
+* Ember 2.0.1
+* Ember-data 2.0.0
+* Ember Torii
+* Emberfire
+* Bootstrap 4 Alpha
+* Fontawesome 
+
 
 ## Prerequisites
 
