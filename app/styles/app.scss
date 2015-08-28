@@ -1,5 +1,4 @@
-@import "custom-variables.scss";
+@import "_custom-variables.scss";
 @import "../../bower_components/bootstrap/scss/bootstrap.scss";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
-@import "ember-firebase-test.scss";
-
+@import "_ember-firebase-test.scss";

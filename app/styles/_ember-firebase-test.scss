@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 body {
-  font-family: $font_0, $font_1, $font_2, $font_3, $font_4, $font_5, $font_6;
-  color: $dark-gray;
+  font-family: $font-stack;
+  color: $font-color;
 }
 a {
   color: inherit;
@@ -51,7 +51,7 @@ header {
 }
 .error-message {
   border-color: $brand-danger;
-  box-shadow: inset 0 1px 1px $black_shadow;
+  box-shadow: inset 0 1px 1px $black-shadow;
   color: $brand-danger;
   border-color: $brand-danger;
   margin-top: 3px;

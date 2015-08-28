@@ -18,5 +18,5 @@ module.exports = function(defaults) {
      overwrite: true
   });
 
-  return app.toTree(merged);f 
+  return app.toTree(merged);
 };
