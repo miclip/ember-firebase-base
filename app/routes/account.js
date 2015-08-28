@@ -1,10 +1,5 @@
-// app/routes/account.js
-import Ember from 'ember';
+import AuthBase from './authenticated-base';
 
-export default Ember.Route.extend({
-	beforeModel: function() {
-		if(!this.get('session').get('isAuthenticated')){
-			this.transitionTo('login');
-		}  
-	}
+export default AuthBase.extend({
+	
 });
