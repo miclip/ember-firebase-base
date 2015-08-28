@@ -1,8 +1,5 @@
-import AuthBase from '../authenticated-base';
+import AuthUserBase from './authenticated-user';
 
-export default AuthBase.extend({
-	model: function(){
-		var uid = this.get('session').get('currentUser').get('id');
-	    return this.store.find('user',uid);
-	},
+export default AuthUserBase.extend({
+	
 });
