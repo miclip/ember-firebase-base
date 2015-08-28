@@ -41,5 +41,9 @@
     "firebase-tools": "1.2.0",
     "phantomjs": "^1.9.18",
     "torii": "0.5.1"
+  },
+  "dependencies": {
+    "broccoli-merge-trees": "^0.2.3",
+    "ember-cli-sass": "^4.2.0"
   }
 }

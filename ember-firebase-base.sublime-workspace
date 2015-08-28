@@ -12,50 +12,34 @@
 	"buffers":
 	[
 		{
-			"file": "app/templates/account.hbs",
+			"file": "config/environment.js",
 			"settings":
 			{
-				"buffer_size": 782,
+				"buffer_size": 1460,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/templates/account/password.hbs",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 1141,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/change-password.js",
-			"settings":
-			{
-				"buffer_size": 209,
+				"buffer_size": 1242,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/routes/account/password.js",
+			"file": "testem.json",
 			"settings":
 			{
-				"buffer_size": 352,
+				"buffer_size": 198,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/controllers/account/password.js",
+			"file": "bower.json",
 			"settings":
 			{
-				"buffer_size": 2019,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/templates/components/display-errors.hbs",
-			"settings":
-			{
-				"buffer_size": 347,
+				"buffer_size": 667,
 				"line_ending": "Windows"
 			}
 		},
@@ -63,31 +47,55 @@
 			"file": "tests/acceptance/user-can-register-test.js",
 			"settings":
 			{
-				"buffer_size": 947,
+				"buffer_size": 953,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/controllers/account/delete.js",
+			"file": "tests/index.html",
 			"settings":
 			{
-				"buffer_size": 1821,
+				"buffer_size": 995,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/templates/account/account.hbs",
+			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 1101,
+				"buffer_size": 794,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/router.js",
+			"file": "app/styles/app.sscs",
 			"settings":
 			{
-				"buffer_size": 470,
+				"buffer_size": 204,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/styles/ember-firebase-test.sscs",
+			"settings":
+			{
+				"buffer_size": 2699,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/styles/custom-variables.scss",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ember-cli-build.js",
+			"settings":
+			{
+				"buffer_size": 679,
 				"line_ending": "Windows"
 			}
 		}
@@ -127,7 +135,7 @@
 				"Set Syntax: HTML"
 			]
 		],
-		"width": 416.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -144,6 +152,17 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/Ember/ember-firebase-base/app/routes/account/password.js",
+		"/C/Projects/Ember/ember-firebase-base/app/templates/account.hbs",
+		"/C/Projects/Ember/ember-firebase-base/app/templates/account/password.hbs",
+		"/C/Projects/Ember/ember-firebase-base/app/models/change-password.js",
+		"/C/Projects/Ember/ember-firebase-base/app/controllers/account/password.js",
+		"/C/Projects/Ember/ember-firebase-base/app/templates/components/display-errors.hbs",
+		"/C/Projects/Ember/ember-firebase-base/tests/acceptance/user-can-register-test.js",
+		"/C/Projects/Ember/ember-firebase-base/app/controllers/account/delete.js",
+		"/C/Projects/Ember/ember-firebase-base/app/templates/account/account.hbs",
+		"/C/Projects/Ember/ember-firebase-base/app/router.js",
+		"/C/Projects/Ember/ember-firebase-base/README.md",
 		"/C/Projects/Ember/firebase-test/app/models/user.js",
 		"/C/Projects/Ember/firebase-test/app/routes/account/delete.js",
 		"/C/Projects/Ember/firebase-test/app/controllers/login.js",
@@ -238,56 +257,58 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/templates/account.hbs",
+					"file": "config/environment.js",
 					"settings":
 					{
-						"buffer_size": 782,
+						"buffer_size": 1460,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								98,
-								98
+								1026,
+								1026
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 315.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/templates/account/password.hbs",
+					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 1141,
+						"buffer_size": 1242,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								315,
-								315
+								32,
+								32
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -297,23 +318,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/models/change-password.js",
+					"file": "testem.json",
 					"settings":
 					{
-						"buffer_size": 209,
+						"buffer_size": 198,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -323,24 +346,25 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/routes/account/password.js",
+					"file": "bower.json",
 					"settings":
 					{
-						"buffer_size": 352,
+						"buffer_size": 667,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								352,
-								352
+								19,
+								19
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -350,70 +374,18 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/controllers/account/password.js",
-					"settings":
-					{
-						"buffer_size": 2019,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								998,
-								1708
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/templates/components/display-errors.hbs",
-					"settings":
-					{
-						"buffer_size": 347,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								347,
-								347
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "tests/acceptance/user-can-register-test.js",
 					"settings":
 					{
-						"buffer_size": 947,
+						"buffer_size": 953,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								561,
-								561
+								87,
+								106
 							]
 						],
 						"settings":
@@ -429,51 +401,109 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "app/controllers/account/delete.js",
+					"buffer": 5,
+					"file": "tests/index.html",
 					"settings":
 					{
-						"buffer_size": 1821,
+						"buffer_size": 995,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1735,
-								1735
+								442,
+								442
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 396.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 794,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								726,
+								726
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/styles/app.sscs",
+					"settings":
+					{
+						"buffer_size": 204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								33
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "app/templates/account/account.hbs",
+					"file": "app/styles/ember-firebase-test.sscs",
 					"settings":
 					{
-						"buffer_size": 1101,
+						"buffer_size": 2699,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								507,
-								507
+								327,
+								327
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -483,23 +513,51 @@
 				},
 				{
 					"buffer": 9,
-					"file": "app/router.js",
+					"file": "app/styles/custom-variables.scss",
 					"settings":
 					{
-						"buffer_size": 470,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								447,
-								447
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "ember-cli-build.js",
+					"settings":
+					{
+						"buffer_size": 679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								609,
+								609
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
