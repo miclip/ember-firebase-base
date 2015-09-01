@@ -38,14 +38,13 @@ actions:{
 	  	ref.createUser({ email:email,password:password, session:"sessionOnly"}, function(err, userData) {
 			if(!err){
 				Ember.RSVP.Promise.resolve();
-				console.log("uid:"+userData.uid);
-				  // save firebase id and clear password
-					model.set('id', userData.uid);
-					model.set('name',null);
-					model.set('password', null);
-					model.set('passwordConfirmation', null);
-					model.set('createdDate',new Date());
-					model.save();
+				// discard model, create new user with firebase id
+					model.deleteRecord();
+					self.get('store').find('user', userData.uid)
+      			.catch(() => {
+        		let newUser = self.get('store').createRecord('user', {id:userData.uid});
+        		newUser.save();
+         });
 				self.set('registerSuccess', true);
 			} else {
 				Ember.RSVP.Promise.reject(err);
